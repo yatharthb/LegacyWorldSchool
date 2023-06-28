@@ -32,13 +32,13 @@ export default {
       properties: [
         {
           title: "Luxury Villa",
-          image: "https://via.placeholder.com/150",
+          image: "im2.png",
           description: "Beautiful luxury villa in a prime location.",
           price: "$1,200,000",
         },
         {
           title: "Modern Apartment",
-          image: "https://via.placeholder.com/150",
+          image: "im3.png",
           description: "Stunning modern apartment with city views.",
           price: "$450,000",
         },

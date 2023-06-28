@@ -44,7 +44,7 @@ export default {
       showTitle: false,
       showImage: false,
       showContent: false,
-      aboutImage: "https://via.placeholder.com/500",
+      aboutImage: "im1.png",
     };
   },
   mounted() {
