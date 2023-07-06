@@ -9,9 +9,9 @@
         :key="index"
         class="col-md-4 mt-4"
       >
-        <div class="card h-100">
-          <img :src="property.image" class="card-img-top" alt="property image" />
-          <div class="card-body">
+        <div class="card h-100 property-card">
+          <div class="card-img" :style="`background-image: url(${property.image});`"></div>
+          <div class="card-info">
             <h5 class="card-title">{{ property.title }}</h5>
             <p class="card-text">{{ property.description }}</p>
           </div>
@@ -48,3 +48,53 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.property-card {
+  position: relative;
+  overflow: hidden;
+  font-family: "Times New Roman", Times, serif; /* Update this to the desired luxurious font */
+}
+
+.card-img {
+  height: 200px; /* Adjust the height based on your preference */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.card-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.card-text {
+  display: none;
+}
+
+.card-info:hover .card-text {
+  display: block;
+}
+
+.card-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+}
+</style>

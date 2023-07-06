@@ -14,6 +14,8 @@ export default {
 </script>
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap');
+
 .hero {
   position: relative;
   width: 100%;
@@ -30,6 +32,7 @@ export default {
 .hero-content {
   text-align: center;
   color: #ffffff;
+  font-family: 'Cinzel', serif; /* Added the Cinzel font */
 }
 
 .hero-content h1 {
