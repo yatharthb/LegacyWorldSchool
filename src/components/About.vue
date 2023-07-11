@@ -17,18 +17,12 @@
         </div>
         <div class="col-md-6">
           <transition name="slide" mode="out-in">
-            <div v-if="showContent">
-              <p>
-                We are a dedicated team of realtors with years of experience in
-                the industry. Our mission is to help you find your dream home
-                or investment property.
-              </p>
-              <p>
-                Our team has access to exclusive listings, and we are committed
-                to providing personalized service to ensure that you find the
-                perfect property to suit your needs.
-              </p>
-            </div>
+           <div v-if="showContent" class="about-content">
+  <div class="realtor-name">Shrithi Agarwal</div>
+  <p class="about-text">
+    Shrithi Agarwal, a passionate, confident real estate agent in California, leverages her background in corporate law and love for home décor and architecture. She specializes in residential real estate, and has built trust-based relationships with diverse clients, from first-time home buyers to high-profile veterans. Operating largely by referral, Shrithi’s service extends beyond transactions, focusing on clients’ best interests. Affiliated with the Realtor Association of San Diego and National Association of Realtors, she and her dedicated team actively work with buyers and sellers at all price levels.
+  </p>
+</div>
           </transition>
         </div>
       </div>
@@ -44,7 +38,7 @@ export default {
       showTitle: false,
       showImage: false,
       showContent: false,
-      aboutImage: "im1.png",
+      aboutImage: "about.png",
     };
   },
   mounted() {
@@ -66,9 +60,6 @@ export default {
 .fade-leave-to {
   opacity: 0;
 }
-h2 {
-  font-family: "Playfair Display", serif; /* Add this line to use Playfair Display for the h2 element */
-}
 
 .slide-enter-active,
 .slide-leave-active {
@@ -77,5 +68,33 @@ h2 {
 .slide-enter,
 .slide-leave-to {
   transform: translateY(50px);
+}
+
+.about {
+  background-color: #f9f9f9; /* Add a subtle background color for a luxurious feel */
+}
+
+h2 {
+  font-family: "Playfair Display", serif;
+}
+
+.realtor-name {
+  font-family: "Cormorant Garamond", serif; /* Update the font-family to Cormorant Garamond */
+  font-size: 36px; /* Increase the font-size */
+  color: #d4af37;
+  margin-bottom: 20px;
+}
+
+.about-text {
+  font-family: "Cormorant Garamond", serif; /* Update the font-family to Cormorant Garamond */
+  font-size: 20px; /* Increase the font-size */
+  line-height: 1.6;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
 }
 </style>

@@ -2,7 +2,7 @@
   <div class="container mt-4">
     <div class="row">
       <div class="col-12">
-        <h2>Property Listings</h2>
+        <h2 class="text-center mb-4">Property Listings</h2>
       </div>
       <div
         v-for="(property, index) in properties"

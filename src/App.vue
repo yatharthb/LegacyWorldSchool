@@ -5,6 +5,7 @@
     <PropertyList />
     <Sales />
     <About />
+    <Footer/>
   </div>
 </template>
 
@@ -14,6 +15,7 @@ import Hero from "./components/Hero.vue";
 import PropertyList from "./components/PropertyList.vue";
 import Sales from "./components/Sales.vue";
 import About from "./components/About.vue";
+import Footer from "./components/Footer.vue";
 
 export default {
   name: "App",
@@ -23,6 +25,7 @@ export default {
     PropertyList,
     Sales,
     About,
+    Footer,
   },
 };
 </script>
