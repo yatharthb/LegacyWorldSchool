@@ -66,6 +66,9 @@ export default {
 .fade-leave-to {
   opacity: 0;
 }
+h2 {
+  font-family: "Playfair Display", serif; /* Add this line to use Playfair Display for the h2 element */
+}
 
 .slide-enter-active,
 .slide-leave-active {

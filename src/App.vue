@@ -3,6 +3,7 @@
     <Navbar />
     <Hero />
     <PropertyList />
+    <Sales />
     <About />
   </div>
 </template>
@@ -11,6 +12,7 @@
 import Navbar from "./components/Navbar.vue";
 import Hero from "./components/Hero.vue";
 import PropertyList from "./components/PropertyList.vue";
+import Sales from "./components/Sales.vue";
 import About from "./components/About.vue";
 
 export default {
@@ -19,6 +21,7 @@ export default {
     Navbar,
     Hero,
     PropertyList,
+    Sales,
     About,
   },
 };

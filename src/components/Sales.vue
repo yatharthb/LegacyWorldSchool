@@ -2,7 +2,7 @@
   <div class="container mt-4">
     <div class="row">
       <div class="col-12">
-        <h2>Property Listings</h2>
+        <h2>Past Sales</h2>
       </div>
       <div
         v-for="(property, index) in properties"
@@ -26,7 +26,7 @@
 
 <script>
 export default {
-  name: "PropertyList",
+  name: "Sales",
   data() {
     return {
       properties: [
