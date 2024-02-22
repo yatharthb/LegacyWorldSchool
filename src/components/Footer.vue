@@ -3,7 +3,13 @@
     <div class="container">
       <div class="row">
         <div class="col-md-4">
-          <img src="logo.png" alt="Realtor Logo" class="logo" />
+          <!-- Embed Google Maps iframe here -->
+          <div class="mini-map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3627.6679038750704!2d73.7028196!3d24.600654799999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3967e500258df1ef%3A0x347cc7c0c558937!2sLegacy%20world%20school!5e0!3m2!1sen!2sin!4v1708364543019!5m2!1sen!2sin" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+        <div class="col-md-4">
+         
           <div class="social-links">
             <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
             <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
@@ -11,41 +17,30 @@
             <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
           </div>
         </div>
-        <div class="col-md-4">
-          <h4 class="footer-title">Sitemap</h4>
-          <ul>
-            <li><a href="#">Home Search</a></li>
-            <li><a href="#">Become a Luxury Realtor Group Insider</a></li>
-          </ul>
-        </div>
+        
         <div class="col-md-4">
           <h4 class="footer-title">Contact</h4>
           <p>
-            123 Luxury Avenue<br />
-            San Diego, CA 12345<br />
-            Real Estate License Number: 1234567<br />
-            Phone: (123) 456-7890<br />
-            Email: info@luxuryrealtor.com
+            Legacy World School
+            
+            <br />
+            Legacy Road, Near R.K. circle<br />
+            Udaipur 313001<br />
+           
+            Email:  lws.udaipur@gmail.com
+            Phone:  +91 766547108 <br> +91 9636352535
+            
           </p>
         </div>
       </div>
       <div class="row">
         <div class="col-md-12">
-          <p class="disclaimer">
-            This website is provided for informational purposes only. It is not
-            intended to be legal, financial, or tax advice. Please consult a
-            qualified professional for assistance in these areas.
-          </p>
+          
           <p class="copyright">
-            &copy; 2023 Luxury Realtor Group. All rights reserved. |
+            &copy; 2024 Legacy World School. All rights reserved. 
             <a href="#">Privacy Policy</a>
           </p>
-          <p class="credits">
-            Designed and developed by
-            <a href="https://www.luxurypresence.com/" target="_blank"
-              >Luxury Presence</a
-            >
-          </p>
+          
         </div>
       </div>
     </div>
@@ -108,4 +103,14 @@ a {
 a:hover {
   text-decoration: underline;
 }
+
+  .mini-map {
+    margin: 20px 0; /* Adjust margin as needed */
+  }
+
+  /* You can add additional CSS rules to style the iframe as needed */
+  iframe {
+    border: none; /* Removes the default border around iframes */
+    /* Other styles if necessary */
+  }
 </style>

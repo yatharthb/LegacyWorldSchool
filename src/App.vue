@@ -2,9 +2,9 @@
   <div id="app">
     <Navbar />
     <Hero />
-    <PropertyList />
-    <Sales />
-    <About />
+     <About />
+    <Legacy />
+    <Programs />
     <ContactSection />
     <Footer/>
   </div>
@@ -13,8 +13,8 @@
 <script>
 import Navbar from "./components/Navbar.vue";
 import Hero from "./components/Hero.vue";
-import PropertyList from "./components/PropertyList.vue";
-import Sales from "./components/Sales.vue";
+import Programs from "./components/Programs.vue";
+import Legacy from "./components/Legacy.vue";
 import About from "./components/About.vue";
 import ContactSection from "./components/ContactSection.vue";
 import Footer from "./components/Footer.vue";
@@ -24,9 +24,9 @@ export default {
   components: {
     Navbar,
     Hero,
-    PropertyList,
-    Sales,
     About,
+    Legacy,
+    Programs,
     ContactSection,
     Footer,
   },

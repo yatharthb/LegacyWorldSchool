@@ -1,9 +1,9 @@
 <template>
-  
-  <div class="about py-5" id="about">
+
+  <div class="about py-5" id="legacy">
     <div class="container">
       <transition name="fade">
-        <h2 v-if="showTitle" class="text-center mb-4">About Us</h2>
+        <h2 v-if="showTitle" class="text-center mb-4">True Legacy</h2>
       </transition>
       <div class="row">
         <div class="col-md-6">
@@ -21,14 +21,15 @@
            <div v-if="showContent" class="about-content">
   <div class="realtor-name"></div>
   <p class="about-text">
-    At Legacy World School we're dedicated to fostering joyful individuals. Our mission is to support children's holistic development—mind, body, and spirit—through a comprehensive curriculum that stimulates every facet of their being. Our educational philosophy celebrates children as naturally inquisitive, capable of profound thinking, and adept at making connections.
-<br>
-<br>
-    We reject the notion of passive learning and instead champion active engagement, providing diverse avenues for self-expression. Drawing inspiration from global early childhood education standards, we prioritize instilling grit, empathy, collaboration, and a growth mindset in children from the outset.
+    "When educators perceive children as competent and capable, the learning environment transforms into a realm of wonder, excitement, and joy for both the child and the educator."
     <br>
     <br>
-    Central to our core values is recognizing children's fundamental right to play. We believe that to unlock their true potential, children require an environment that sparks curiosity, encourages exploration, and nurtures a sense of wonder. Through our learning centers, we aim to create spaces where children eagerly anticipate each day, and where educators are empowered to profoundly impact a child's journey.
+    The Legacy World School  aims to establish a robust foundation for early learning within a nurturing, play-based, and academically enriching setting.
+<br>
+<br>
+    Our educational philosophy draws inspiration from the Reggio Emilia Approach, the Montessori Method, and the Creative Curriculum. Anchored in four guiding principles, our holistic child development framework emphasizes on 4 guiding principles and is focuses on the development of 8 key foundational skills in children.
   </p>
+             
 </div>
           </transition>
         </div>
@@ -45,7 +46,7 @@ export default {
       showTitle: false,
       showImage: false,
       showContent: false,
-      aboutImage: "about.png",
+      aboutImage: "legacy.png",
     };
   },
   mounted() {

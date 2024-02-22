@@ -16,19 +16,22 @@
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
-          </li>
-          <li class="nav-item">
-            <button class="contact-btn" :class="{ 'scrolled': scrolled }">Contact</button>
-          </li>
-        </ul>
-      </div>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent" ref="navbarCollapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="#about" @click="collapseNavbar">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#legacy" @click="collapseNavbar">True Legacy</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#programs" @click="collapseNavbar">Programs</a>
+        </li>
+        <li class="nav-item">
+          <button class="contact-btn" :class="{ 'scrolled': scrolled }" @click="collapseNavbar">Admissions</button>
+        </li>
+      </ul>
+    </div>
     </div>
   </nav>
 </template>
@@ -49,6 +52,18 @@ export default {
     window.removeEventListener("scroll", this.handleScroll);
   },
   methods: {
+    collapseNavbar() {
+      // Check if the screen width is less than or equal to 768 pixels
+      if (window.innerWidth <= 768) {
+        // Check if the navbar collapse is visible
+        if (this.$refs.navbarCollapse.classList.contains('show')) {
+          const bsCollapse = new bootstrap.Collapse(this.$refs.navbarCollapse, {
+            toggle: false
+          });
+          bsCollapse.hide();
+        }
+      }
+    },
     handleScroll() {
       this.scrolled = window.scrollY > 0;
     },
@@ -91,11 +106,11 @@ export default {
 }
 
 .nav-link:hover {
-  color: #d4af37; /* Gold color */
+  color: #f73e41; /* red color */
 }
 
 .navbar.scrolled .nav-link:hover {
-  color: #d4af37; /* Gold color when scrolled */
+  color: #f73e41; /* red color when scrolled */
 }
 
 .navbar-toggler-icon {
@@ -115,22 +130,58 @@ export default {
   border: none;
   border-radius: 0.25rem;
   background-color: #ffffff;
-  color: #d4af37; /* Gold text */
+  color: #f73e41; /* red text */
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .contact-btn:hover {
-  background-color: #d4af37; /* Gold background */
+  background-color: #f73e41; /* red background */
   color: #ffffff; /* White text */
 }
 
 .contact-btn.scrolled {
-  background-color: #d4af37; /* Gold background */
-  color: #ffffff; /* White text */
+  background-color: #f73e41; /* Gold background */
+  color: #ffffff; /* red text */
 }
 
 .contact-btn.scrolled:hover {
   background-color: #ffffff; /* White background */
-  color: #d4af37; /* Gold text */
+  color: #f73e41; /* red text */
 }
+  @media (max-width: 768px) {
+    .navbar {
+      background-color: #ffffff; /* Set the navbar background to white for mobile */
+    }
+
+    .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(0, 0, 0, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"); /* Ensure the toggler icon is visible against a white background */
+    }
+
+    .logo {
+      height: 30px; /* Adjusted logo size for mobile screens */
+    }
+
+    .navbar-brand,
+    .nav-link {
+      color: #000000; /* Set text color to black for better contrast against the white background */
+    }
+
+    .navbar-nav {
+      margin-top: 15px;
+    }
+
+    .nav-item {
+      margin-bottom: 5px; /* Add space between menu items */
+    }
+
+    .contact-btn {
+      padding: 0.5rem 1rem; /* Adjust button padding for smaller screens */
+      font-size: 0.9rem; /* Adjust font size for smaller screens */
+      margin: 0 0 5px; /* Adjust margin for smaller screens */
+      display: block; /* Make the button take the full width */
+      width: 100%; /* Make sure button stretches to full width */
+      background-color: #f73e41; /* Set button background color for better visibility */
+      color: #ffffff; /* Set button text color for better visibility */
+    }
+  }
 </style>

@@ -1,8 +1,8 @@
 <template>
   <section class="hero">
     <div class="hero-content">
-      <h1>Welcome to Realtor</h1>
-      <p>Find your dream property today</p>
+      <h2>Bringing Whole Child Learning To Life</h2>
+    
     </div>
   </section>
 </template>

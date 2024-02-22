@@ -3,8 +3,8 @@
     <div class="container">
       <h2 class="section-title">Get In Touch</h2>
       <p class="section-subtitle">
-        To schedule a showing or ask questions about buying or selling, please
-        contact me using the form below.
+        To schedule a visit or to ask questions about admissions, please
+        contact us using the form below.
       </p>
       <form @submit.prevent="handleSubmit">
         <div class="form-group">
