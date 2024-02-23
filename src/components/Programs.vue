@@ -50,7 +50,7 @@ export default {
         {
           key: 'tiger',
           title: 'Grades 1 & 2 - Tigers and Leopards ',
-          description: 'At Legacy Grade 1 and 2 kids roar with energy like playful tigers, pouncing on new knowledge with curiosity and enthusiasm. Their enthusiasm often leads them to explore every nook and cranny of their environment, just like curious cubs exploring their territory. Meanwhile, some kids embody the stealth and grace of leopards, quietly observing before making their moves, showcasing a blend of keen observation and agility in their learning journey. Together, they create a vibrant ecosystem of learning, where children bring out their unique traits contributing to the dynamic nature of the classroom jungle.',
+          description: 'At Legacy Grade 1 and 2 kids roar with energy like playful tigers, pouncing onto new knowledge with curiosity and enthusiasm. Their enthusiasm often leads them to explore every nook and cranny of their environment, just like curious cubs exploring their territory. Meanwhile, some kids embody the stealth and grace of leopards, quietly observing before making their moves, showcasing a blend of keen observation and agility in their learning journey. Together, they create a vibrant ecosystem of learning, where children bring out their unique traits contributing to the dynamic nature of the classroom jungle.',
           icon: 'tiger.png',
         },
         {

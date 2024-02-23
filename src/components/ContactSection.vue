@@ -31,6 +31,8 @@
 </template>
 
 <script>
+import axios from 'axios';
+
 export default {
   name: 'ContactSection',
   data() {
@@ -45,7 +47,17 @@ export default {
   },
   methods: {
     handleSubmit() {
-      // Form submission logic (sending the form data to an email)
+      axios.post('/api/send-email', this.formData)
+        .then(response => {
+          // Handle the success state
+          console.log('Email sent!', response);
+          // Optionally reset the form or give user feedback
+        })
+        .catch(error => {
+          // Handle the error state
+          console.error('Failed to send email:', error);
+          // Optionally give user feedback
+        });
     },
   },
 };
