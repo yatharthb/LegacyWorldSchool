@@ -32,6 +32,7 @@
 
 <script>
 import axios from 'axios';
+import emailjs from 'emailjs-com';
 
 export default {
   name: 'ContactSection',
@@ -45,19 +46,21 @@ export default {
       },
     };
   },
+  mounted() {
+    emailjs.init("YOUR_USER_ID"); // Replace 'YOUR_USER_ID' with your actual user ID from EmailJS
+  },
   methods: {
     handleSubmit() {
-      axios.post('/api/send-email', this.formData)
-        .then(response => {
+      emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this.formData)
+      .then((response) => {
+          console.log('SUCCESS!', response.status, response.text);
           // Handle the success state
-          console.log('Email sent!', response);
           // Optionally reset the form or give user feedback
-        })
-        .catch(error => {
+      }, (error) => {
+          console.log('FAILED...', error);
           // Handle the error state
-          console.error('Failed to send email:', error);
           // Optionally give user feedback
-        });
+      });
     },
   },
 };

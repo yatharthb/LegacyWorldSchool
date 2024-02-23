@@ -12,11 +12,10 @@ let transporter = nodemailer.createTransport({
     port: 465, // Используйте порт 465 для SSL
     secure: true, // Используйте true, так как мы используем SSL
     auth: {
-        user: 'your-email@mail.ru', // Ваш адрес электронной почты на Mail.ru
-        pass: 'your-password' // Ваш пароль от почтового ящика на Mail.ru
+         // Ваш пароль от почтового ящика на Mail.ru
     }
 });
-XLnNpLuE1yUJ6fzjc2NY
+
 app.post('/api/send-email', (req, res) => {
   const { name, email, phone, message } = req.body;
   const mailOptions = {
