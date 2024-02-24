@@ -8,7 +8,7 @@
       </p>
       <form @submit.prevent="handleSubmit">
         <div class="form-group">
-          <label for="name">Name</label>
+          <label for="name">Child's Full Name</label>
           <input type="text" id="name" v-model="formData.name" required />
         </div>
         <div class="form-group">
@@ -51,7 +51,7 @@ export default {
   },
   methods: {
     handleSubmit() {
-       this.formData)
+      
       .then((response) => {
           console.log('SUCCESS!', response.status, response.text);
           // Handle the success state

@@ -18,18 +18,8 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent" ref="navbarCollapse">
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link" href="#about" @click="collapseNavbar">About Us</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#legacy" @click="collapseNavbar">True Legacy</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#programs" @click="collapseNavbar">Programs</a>
-        </li>
-        <li class="nav-item">
-          <button class="contact-btn" :class="{ 'scrolled': scrolled }" @click="goToContactPage">Admissions</button>
-        </li>
+        
+        
       </ul>
     </div>
     </div>
@@ -39,7 +29,7 @@
 
 <script>
 export default {
-  name: "Navbar",
+  name: "ContactNavbar",
   data() {
     return {
       scrolled: false,
@@ -88,6 +78,7 @@ export default {
   left: 0;
   width: 100%;
   z-index: 100;
+  margin-bottom: 25px;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -127,7 +118,7 @@ export default {
 .navbar.scrolled .navbar-toggler-icon {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(0, 0, 0, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
-  
+
 .contact-btn {
   font-family: 'Playfair Display', serif;
   font-size: 1rem;

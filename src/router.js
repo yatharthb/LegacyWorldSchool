@@ -10,7 +10,7 @@ const routes = [
   },
   {
     path: '/contact',
-    name: 'Contact',
+    name: 'contact',
     component: Contact,
   },
   // ... other routes
