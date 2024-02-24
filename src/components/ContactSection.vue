@@ -32,7 +32,7 @@
 
 <script>
 import axios from 'axios';
-import emailjs from 'emailjs-com';
+import emailjs from '@emailjs/browser';
 
 export default {
   name: 'ContactSection',
@@ -47,11 +47,11 @@ export default {
     };
   },
   mounted() {
-    emailjs.init("YOUR_USER_ID"); // Replace 'YOUR_USER_ID' with your actual user ID from EmailJS
+    emailjs.init("iBcgTqbpMztJXGMFh"); // Replace 'YOUR_USER_ID' with your actual user ID from EmailJS
   },
   methods: {
     handleSubmit() {
-      emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this.formData)
+       this.formData)
       .then((response) => {
           console.log('SUCCESS!', response.status, response.text);
           // Handle the success state
